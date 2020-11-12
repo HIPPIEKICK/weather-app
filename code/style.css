@@ -56,18 +56,20 @@ p {
 /* Footer */
 
 footer {
-  text-align: center;
+  width: 100%;
+  max-width: 400px;
 }
 
 input {
   background: #F4F7F8;
   height: 20px;
-  width: 100px;
+  width: 200px;
   font-size: 16px;
   border: 1px solid;
-  padding: 5px;
+  padding: 4px 8px;
   margin: 50px 0;
 }
+
 
 .cloudy input {
   color: #F47775;
@@ -112,6 +114,11 @@ input {
   }
 
   .forecast {
+    max-width: 500px;
+  }
+
+  footer {
+    width: 100%;
     max-width: 500px;
   }
 }
