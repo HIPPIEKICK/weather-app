@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My weather app</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+  <!-- You find some images in the assets folder.
+  Feel free to use them if you'd like, or search
+  for other assets on e.g. https://thenounproject.com/ -->
+
+  <section class="today">
+    <div class="todays-numbers">
+      <p id="temperature"></p>
+      <p id="sunrise"></p>
+      <p id="sunset"></p>
+    </div>
+    <div class="todays-description">
+      <img id="icon"/>
+      <h2 id="description"></h2>
+    </div>
+  </section>
+  <section id="forecast" class="forecast">
+  </section>
+  <footer>
+    <input
+      id="chosenCity"
+      type="text"
+      placeholder="Search city..."
+      onsubmit="changeCity()"
+    />
+    <p class="error" id="error"></p>
+  </footer>
+
+  <script type="text/javascript" src="./weather.js"></script>
+</body>
+</html>
