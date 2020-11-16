@@ -70,7 +70,7 @@ const fetchWeather = (city) => {
   })
 }
 
-const dates = {}
+let dates = {}
 
 const convertDate = (date) => {
   //Get the correct day
@@ -103,15 +103,21 @@ const fetchForecast = (city) => {
 
         //Getting weather values
         Object.entries(dates).forEach((item, index) => {
+          dates = {}
           const date = item[0]
           const weatherValues = item[1]
           const temps = weatherValues.map((value) => value.main.temp)
           
           const sum = temps.reduce((a, b) => a + b, 0);
-          const averageTemp = (sum / temps.length) || 0;
-
+          let averageTemp = (sum / temps.length) || 0;
+          
           if (index === 0) {
             return
+          }
+
+          let fixedTemp = averageTemp.toFixed()
+          if (fixedTemp === "-0") {
+            fixedTemp = "0"
           }
 
           const day = convertDate(date)
@@ -120,7 +126,7 @@ const fetchForecast = (city) => {
             forecast.innerHTML += `
               <div>
                 <p>${day}</p>
-                <p>${averageTemp.toFixed()} °C</p>
+                <p>${fixedTemp} °C</p>
               </div>
             `
           } catch (error) {
