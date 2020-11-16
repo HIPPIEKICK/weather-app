@@ -1,3 +1,4 @@
+/* Styling for the body */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 30px;
@@ -5,21 +6,26 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+/* Styling for the body when the classname is "cloudy" */
 .cloudy {
   background: #F4F7F8;
   color: #F47775;
 }
 
-.sunny {
-  background: #F7E9B9;
-  color: #2A5510;
-}
-
+/* Styling for the body when the classname is "rainy" */
 .rainy {
   background: #A3DEF7;
   color: #164A68;
 }
 
+/* Styling for the body when the classname is "sunny" */
+.sunny {
+  background: #F7E9B9;
+  color: #2A5510;
+}
+
+/* Styling for the body when the classname is "unknown" */
 .unknown {
   background: #dbf6e9;
   color: #31326f;
