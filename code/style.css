@@ -1,4 +1,3 @@
-/* Styling for the body */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 30px;
@@ -6,26 +5,21 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-/* Styling for the body when the classname is "cloudy" */
 .cloudy {
   background: #F4F7F8;
   color: #F47775;
 }
 
-/* Styling for the body when the classname is "rainy" */
-.rainy {
-  background: #A3DEF7;
-  color: #164A68;
-}
-
-/* Styling for the body when the classname is "sunny" */
 .sunny {
   background: #F7E9B9;
   color: #2A5510;
 }
 
-/* Styling for the body when the classname is "unknown" */
+.rainy {
+  background: #A3DEF7;
+  color: #164A68;
+}
+
 .unknown {
   background: #dbf6e9;
   color: #31326f;
@@ -43,7 +37,6 @@ p {
 .todays-description h2 {
   font-size: 32px;
   max-width: 400px;
-  margin: 0 auto 20px auto;
 }
 
 .todays-description img {
@@ -88,6 +81,10 @@ input {
 .sunny input, .sunny input::placeholder {
   color:  #2A5510;
   border-radius: 4px;
+}
+
+.error {
+  font-size: 14px;
 }
 
 @media (min-width: 668px) {
