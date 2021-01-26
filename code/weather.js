@@ -11,6 +11,7 @@ const icon = document.getElementById("icon")
 const errorMessage = document.getElementById("error")
 
 const chosenCity = document.getElementById("chosenCity")
+const searchButton = document.getElementById("citySearchButton")
 
 let city = "Stockholm"
 
@@ -153,6 +154,10 @@ chosenCity.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
     changeCity()
   }
+})
+
+searchButton.addEventListener("click", () => {
+  changeCity()
 })
 
 //Fetch Stockholm data on page load
